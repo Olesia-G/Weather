@@ -1,0 +1,56 @@
+<!--Fetch weather forecast (new)
+Estimate - 40h 
+Створити програму для отримання прогнозу погоди за введеним поштовим індексом.
+Програма повинна реалізовувати наступні функції:
+- показувати дані про погоду за введеним поштовим індексом;
+- можливість зберігати введені дані (історія пошуку).
+Додатково:
+- можливість отримання даних за іншими критеріями (місто, координати). -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Forecast</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>    
+	<script type="text/javascript" src="javascript-weather.js"></script>
+    <link rel="stylesheet" type="text/css" href="style-weather.css">
+</head>
+<body>
+    <section>
+        <form id="form" action="#" method="POST">        
+            <input id="awxSearchTextBox" name="description" type="text" placeholder="Enter location name" autocomplete="off" />
+            <input id="awxSearchButton" type="submit" value="" />          
+            <div id="alert"></div> 
+            <button id="clear">Clear history</button>
+        </form>
+    </section>
+		
+	<ul>
+        <li><span id="awxLocationInfo"></span>
+    </ul>
+		
+    <div class="wrap">
+        <input type="radio" name="slides" id="point1" checked>	
+        <input type="radio" name="slides" id="point2">
+        <input type="radio" name="slides" id="point3">
+        <input type="radio" name="slides" id="point4">
+        <input type="radio" name="slides" id="point5">
+                    
+        <div class="control">
+            <label for="point1" id="date1"></label>
+            <label for="point2" id="date2"></label>
+            <label for="point3" id="date3"></label>
+            <label for="point4" id="date4"></label>
+            <label for="point5" id="date5"></label>
+        </div>
+        
+        <div class="slider">
+            <div id="slide1" class="slides"><p id="day1"></p></div>
+            <div id="slide2" class="slides"><p id="day2"></p></div>
+            <div id="slide3" class="slides"><p id="day3"></p></div>
+            <div id="slide4" class="slides"><p id="day4"></p></div>
+            <div id="slide5" class="slides"><p id="day5"></p></div>
+        </div>		
+    </div>
+</body>
+</html>
